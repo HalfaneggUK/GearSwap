@@ -34,14 +34,14 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Carnwenhan = {main="Carnwenhan",sub="Genmei Shield"}
 	sets.weapons.TwashTP = {main="Twashtar",sub="Centovente"}
-	sets.weapons.CarnDW = {main="Twashtar",sub="Kaja Knife"}
+	sets.weapons.TwashAcc = {main="Twashtar",sub="Kaja Knife"}
 	sets.weapons.CarnKali = {main="Carnwenhan",sub="Kali"}
 
 	-- Precast Sets
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-	    head="Fili Calot",
+	    head="Fili Calot +1",
 	    body="Inyanga Jubbah +2",
 	    hands="Gendewitha Gages",
 	    legs="Aya. Cosciales +2",
@@ -60,7 +60,7 @@ function init_gear_sets()
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
 	sets.precast.FC.BardSong = {
-	    head="Fili Calot",
+	    head="Fili Calot +1",
 	    body="Inyanga Jubbah +2",
 	    hands="Gendewitha Gages",
 	    legs="Gende. Spats +1",
@@ -145,8 +145,8 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 	sets.midcast['Horde Lullaby II'] = {range="Marsyas"}
 	sets.midcast['Horde Lullaby II'].Resistant = {range="Linos"}
 	sets.midcast['Horde Lullaby II'].AoE = {range="Daurdabla"}
-	sets.midcast.Madrigal = {head="Fili Calot +1"}
-	sets.midcast.March = {hands="Fili Manchettes"}
+	sets.midcast.Madrigal = {head="Fili Calot +1 +1"}
+	sets.midcast.March = {hands="Fili Manchettes +1"}
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 	sets.midcast.Minuet = {body="Fili Hongreline +1"}
 	sets.midcast.Carol = {}
@@ -158,9 +158,9 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
-	    head="Fili Calot",
+	    head="Fili Calot +1",
 	    body="Fili Hongreline +1",
-	    hands="Fili Manchettes",
+	    hands="Fili Manchettes +1",
 	    legs="Inyanga Shalwar +2",
 	    feet="Brioso Slippers +2",
 	    neck="Mnbw. Whistle +1",

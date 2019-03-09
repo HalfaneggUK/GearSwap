@@ -48,38 +48,92 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 
-	sets.precast.FC = {ammo="Impatiens",
-		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
-		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Kishar Ring",
-		back="Moonlight Cape",waist="Flume Belt",legs=gear.odyssean_fc_legs,feet="Odyssean Greaves"}
+	sets.precast.FC = {
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
+	    body="Tartarus Platemail",
+	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
+	    legs="Odyssean Cuisses",
+	    feet="Sulev. Leggings +1",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Kishar Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
 
 	-- Midcast Sets
-	sets.midcast.FastRecast = {ammo="Staunch Tathlum",
-		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
-		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Kishar Ring",
-		back="Moonlight Cape",waist="Tempus Fugit",legs=gear.odyssean_fc_legs,feet="Odyssean Greaves"}
+	sets.midcast.FastRecast = {
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
+	    body="Tartarus Platemail",
+	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
+	    legs="Odyssean Cuisses",
+	    feet="Sulev. Leggings +1",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Kishar Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
 	-- Specific spells
 
-	sets.midcast['Dark Magic'] = {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"}
+	sets.midcast['Dark Magic'] = {
+	    ammo="Pemphredo Tathlum",
+	    head="Flam. Zucchetto +2",
+	    body="Flamma Korazin +2",
+	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
+	    legs="Odyssean Cuisses",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Stikini Ring +1",
+	    right_ring="Stikini Ring +1",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
-	sets.midcast['Enfeebling Magic'] = {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
-
+	sets.midcast['Enfeebling Magic'] = {
+	    ammo="Pemphredo Tathlum",
+	    head="Flam. Zucchetto +2",
+	    body="Flamma Korazin +2",
+	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
+	    legs="Odyssean Cuisses",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Stikini Ring +1",
+	    right_ring="Stikini Ring +1",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {back="Ankou Mantle"})
 
-	sets.midcast.Stun = {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"}
+	sets.midcast.Stun = {
+	    ammo="Pemphredo Tathlum",
+	    head="Flam. Zucchetto +2",
+	    body="Flamma Korazin +2",
+	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
+	    legs="Odyssean Cuisses",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Stikini Ring +1",
+	    right_ring="Stikini Ring +1",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Evanescence Ring",ring2="Archon Ring",back="Niht Mantle"})
 
@@ -138,7 +192,7 @@ function init_gear_sets()
 		    right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
 		    left_ring="Niqmaddu Ring",
 		    right_ring="Karieyh Ring",
-		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+		    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 		})
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -173,23 +227,23 @@ function init_gear_sets()
             -- Idle sets
 
     sets.idle = {
-		    ammo="Ginsen",
+		    ammo="Staunch Tathlum +1",
 		    head="Flam. Zucchetto +2",
 		    body="Tartarus Platemail",
 		    hands="Sulev. Gauntlets +2",
 		    legs="Sulev. Cuisses +2",
 		    feet="Flam. Gambieras +2",
 		    neck="Abyssal Beads +2",
-		    waist="Ioskeha Belt +1",
+		    waist="Flume Belt +1",
 		    left_ear="Genmei Earring",
 		    right_ear="Telos Earring",
-		    left_ring="Defending Ring",
-		    right_ring="Karieyh Ring",
+		    left_ring="Moonlight Ring",
+		    right_ring="Defending Ring",
 		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		}
 
     sets.idle.PDT = {
-		    ammo="Ginsen",
+		    ammo="Staunch Tathlum +1",
 		    head="Flam. Zucchetto +2",
 		    body="Tartarus Platemail",
 		    hands="Sulev. Gauntlets +2",
@@ -199,76 +253,76 @@ function init_gear_sets()
 		    waist="Flume Belt +1",
 		    left_ear="Genmei Earring",
 		    right_ear="Telos Earring",
-		    left_ring="Defending Ring",
-		    right_ring="Niqmaddu Ring",
+		    left_ring="Moonlight Ring",
+		    right_ring="Defending Ring",
 		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		}
 
 	sets.idle.Weak = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Tartarus Platemail",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Flume Belt +1",
-	    left_ear="Genmei Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			ammo="Staunch Tathlum +1",
+			head="Flam. Zucchetto +2",
+			body="Tartarus Platemail",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Flume Belt +1",
+			left_ear="Genmei Earring",
+			right_ear="Telos Earring",
+			left_ring="Moonlight Ring",
+			right_ring="Defending Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.idle.Reraise = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Tartarus Platemail",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Flume Belt +1",
-	    left_ear="Genmei Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			ammo="Staunch Tathlum +1",
+			head="Flam. Zucchetto +2",
+			body="Tartarus Platemail",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Flume Belt +1",
+			left_ear="Genmei Earring",
+			right_ear="Telos Earring",
+			left_ring="Moonlight Ring",
+			right_ring="Defending Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
     -- Defense sets
 	sets.defense.PDT = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Tartarus Platemail",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Flume Belt +1",
-	    left_ear="Genmei Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			ammo="Staunch Tathlum +1",
+			head="Flam. Zucchetto +2",
+			body="Tartarus Platemail",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Flume Belt +1",
+			left_ear="Genmei Earring",
+			right_ear="Telos Earring",
+			left_ring="Moonlight Ring",
+			right_ring="Defending Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
 
 	sets.defense.MDT = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Tartarus Platemail",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Flume Belt +1",
-	    left_ear="Genmei Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			ammo="Staunch Tathlum +1",
+			head="Flam. Zucchetto +2",
+			body="Tartarus Platemail",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Flume Belt +1",
+			left_ear="Genmei Earring",
+			right_ear="Telos Earring",
+			left_ring="Moonlight Ring",
+			right_ring="Defending Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -283,8 +337,23 @@ function init_gear_sets()
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
 
-	-- Engaged sets
+	-- Engaged sets (Caladbolg)
 	sets.engaged = {
+	    ammo="Ginsen",
+	    head="Flam. Zucchetto +2",
+	    body={ name="Valorous Mail", augments={'Attack+17','"Store TP"+7','STR+7',}},
+	    hands="Flam. Manopolas +1",
+	    legs="Odyssean Cuisses",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Cessance Earring",
+	    right_ear="Telos Earring",
+	    left_ring="Niqmaddu Ring",
+	    right_ring="Petrov Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
+	sets.engaged.DT = {
 	    ammo="Ginsen",
 	    head="Flam. Zucchetto +2",
 	    body="Flamma Korazin +2",
@@ -294,84 +363,69 @@ function init_gear_sets()
 	    neck="Abyssal Beads +2",
 	    waist="Ioskeha Belt +1",
 	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Petrov Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-	sets.engaged.DT = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Sulevia's Plate. +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Ioskeha Belt +1",
-	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
+	    right_ear="Brutal Earring",
+	    left_ring="Moonlight Ring",
+	    right_ring="Defending Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
     sets.engaged.SomeAcc = {
 		    ammo="Ginsen",
 		    head="Flam. Zucchetto +2",
-		    body="Flamma Korazin +2",
+		    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
 		    hands="Sulev. Gauntlets +2",
 		    legs="Sulev. Cuisses +2",
 		    feet="Flam. Gambieras +2",
-		    neck="Sanctity Necklace",
+		    neck="Abyssal Beads +2",
 		    waist="Ioskeha Belt +1",
 		    left_ear="Cessance Earring",
 		    right_ear="Telos Earring",
-		    left_ring="Petrov Ring",
+		    left_ring="Chirich Ring +1",
 		    right_ring="Niqmaddu Ring",
 		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		}
 	sets.engaged.Acc = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body="Flamma Korazin +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Sanctity Necklace",
-	    waist="Ioskeha Belt +1",
-	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Petrov Ring",
-	    right_ring="Niqmaddu Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			ammo="Ginsen",
+			head="Flam. Zucchetto +2",
+			body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Abyssal Beads +2",
+			waist="Ioskeha Belt +1",
+			left_ear="Cessance Earring",
+			right_ear="Telos Earring",
+			left_ring="Chirich Ring +1",
+			right_ring="Niqmaddu Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
     sets.engaged.FullAcc = {
 		    ammo="Ginsen",
 		    head="Flam. Zucchetto +2",
-		    body="Flamma Korazin +2",
+		    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
 		    hands="Sulev. Gauntlets +2",
 		    legs="Sulev. Cuisses +2",
 		    feet="Flam. Gambieras +2",
-		    neck="Sanctity Necklace",
+		    neck="Abyssal Beads +2",
 		    waist="Ioskeha Belt +1",
 		    left_ear="Cessance Earring",
 		    right_ear="Telos Earring",
-		    left_ring="Petrov Ring",
+		    left_ring="Chirich Ring +1",
 		    right_ring="Niqmaddu Ring",
 		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		}
     sets.engaged.Fodder = {
 		    ammo="Ginsen",
 		    head="Flam. Zucchetto +2",
-		    body="Flamma Korazin +2",
-		    hands="Sulev. Gauntlets +2",
-		    legs="Sulev. Cuisses +2",
+		    body={ name="Valorous Mail", augments={'Attack+17','"Store TP"+7','STR+7',}},
+		    hands="Flam. Manopolas +1",
+		    legs="Odyssean Cuisses",
 		    feet="Flam. Gambieras +2",
-		    neck="Sanctity Necklace",
+		    neck="Abyssal Beads +2",
 		    waist="Ioskeha Belt +1",
 		    left_ear="Cessance Earring",
 		    right_ear="Telos Earring",
-		    left_ring="Petrov Ring",
-		    right_ring="Niqmaddu Ring",
+		    left_ring="Niqmaddu Ring",
+		    right_ring="Petrov Ring",
 		    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		}
 --[[
@@ -384,16 +438,16 @@ function init_gear_sets()
 	sets.engaged.PDT = {
 	    ammo="Ginsen",
 	    head="Flam. Zucchetto +2",
-	    body="Sulevia's Plate. +2",
+	    body="Flamma Korazin +2",
 	    hands="Sulev. Gauntlets +2",
 	    legs="Sulev. Cuisses +2",
 	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
+	    neck="Abyssal Beads +2",
 	    waist="Ioskeha Belt +1",
 	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Niqmaddu Ring",
+	    right_ear="Brutal Earring",
+	    left_ring="Moonlight Ring",
+	    right_ring="Defending Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	sets.engaged.SomeAcc.PDT = {}
@@ -423,7 +477,6 @@ function init_gear_sets()
             -- sets if more refined versions aren't defined.
             -- If you create a set with both offense and defense modes, the offense mode should be first.
             -- EG: sets.engaged.Dagger.Accuracy.Evasion
-
 -- Liberator melee sets
     sets.engaged.Liberator = {}
 	sets.engaged.Liberator.SomeAcc = {}

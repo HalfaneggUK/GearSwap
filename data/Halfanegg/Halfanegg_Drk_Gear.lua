@@ -54,7 +54,7 @@ function init_gear_sets()
 	    body="Tartarus Platemail",
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Odyssean Cuisses",
-	    feet="Sulev. Leggings +1",
+	    feet="Sulev. Leggings +2",
 	    neck="Abyssal Beads +2",
 	    waist="Ioskeha Belt +1",
 	    left_ear="Genmei Earring",
@@ -73,7 +73,7 @@ function init_gear_sets()
 	    body="Tartarus Platemail",
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Odyssean Cuisses",
-	    feet="Sulev. Leggings +1",
+	    feet="Sulev. Leggings +2",
 	    neck="Abyssal Beads +2",
 	    waist="Ioskeha Belt +1",
 	    left_ear="Genmei Earring",
@@ -157,7 +157,7 @@ function init_gear_sets()
 		    body="Sulevia's Plate. +2",
 		    hands="Sulev. Gauntlets +2",
 		    legs="Sulev. Cuisses +2",
-		    feet="Sulev. Leggings +1",
+		    feet="Sulev. Leggings +2",
 		    neck="Abyssal Beads +2",
 		    waist="Fotia Belt",
 		    left_ear="Ishvara Earring",
@@ -179,13 +179,13 @@ function init_gear_sets()
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-    sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
+    sets.precast.WS['Torcleaver'] = {
 		    ammo="Knobkierrie",
 		    head={ name="Odyssean Helm", augments={'Weapon skill damage +4%','VIT+15','Accuracy+5',}},
 		    body="Ratri Plate",
 		    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +4%','VIT+8','Accuracy+12','Attack+9',}},
 		    legs="Sulev. Cuisses +2",
-		    feet="Sulev. Leggings +1",
+		    feet="Sulev. Leggings +2",
 		    neck="Abyssal Beads +2",
 		    waist="Fotia Belt",
 		    left_ear="Ishvara Earring",
@@ -193,8 +193,22 @@ function init_gear_sets()
 		    left_ring="Niqmaddu Ring",
 		    right_ring="Karieyh Ring",
 		    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
-		})
-    sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+		}
+    sets.precast.WS['Torcleaver'].SomeAcc = {
+		    ammo="Knobkierrie",
+		    head={ name="Odyssean Helm", augments={'Weapon skill damage +4%','VIT+15','Accuracy+5',}},
+		    body="Ratri Plate",
+		    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +4%','VIT+8','Accuracy+12','Attack+9',}},
+		    legs="Sulev. Cuisses +2",
+		    feet="Sulev. Leggings +2",
+		    neck="Abyssal Beads +2",
+		    waist="Fotia Belt",
+		    left_ear="Ishvara Earring",
+		    right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+		    left_ring="Niqmaddu Ring",
+		    right_ring="Karieyh Ring",
+		    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
+		}
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
@@ -342,8 +356,8 @@ function init_gear_sets()
 	    ammo="Ginsen",
 	    head="Flam. Zucchetto +2",
 	    body={ name="Valorous Mail", augments={'Attack+17','"Store TP"+7','STR+7',}},
-	    hands="Flam. Manopolas +1",
-	    legs="Odyssean Cuisses",
+	    hands="Flam. Manopolas +2",
+	    legs={ name="Odyssean Cuisses", augments={'Accuracy+25','"Store TP"+6','VIT+8',}},
 	    feet="Flam. Gambieras +2",
 	    neck="Abyssal Beads +2",
 	    waist="Ioskeha Belt +1",
@@ -372,8 +386,8 @@ function init_gear_sets()
 		    ammo="Ginsen",
 		    head="Flam. Zucchetto +2",
 		    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
-		    hands="Sulev. Gauntlets +2",
-		    legs="Sulev. Cuisses +2",
+		    hands={ name="Emi. Gauntlets +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+		    legs={ name="Odyssean Cuisses", augments={'Accuracy+25','"Store TP"+6','VIT+8',}},
 		    feet="Flam. Gambieras +2",
 		    neck="Abyssal Beads +2",
 		    waist="Ioskeha Belt +1",
@@ -417,7 +431,7 @@ function init_gear_sets()
 		    ammo="Ginsen",
 		    head="Flam. Zucchetto +2",
 		    body={ name="Valorous Mail", augments={'Attack+17','"Store TP"+7','STR+7',}},
-		    hands="Flam. Manopolas +1",
+		    hands="Flam. Manopolas +2",
 		    legs="Odyssean Cuisses",
 		    feet="Flam. Gambieras +2",
 		    neck="Abyssal Beads +2",

@@ -349,6 +349,22 @@ function init_gear_sets()
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
+	sets.engaged.SomeAcc.DT = {
+			ammo="Ginsen",
+			head="Sulevia's Mask +2",
+			body="Sulevia's Plate. +2",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Ioskeha Belt +1",
+			left_ear="Cessance Earring",
+			right_ear="Telos Earring",
+			left_ring="Defending Ring",
+			right_ring="Moonlight Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
+
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {})
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {})
   sets.engaged.Fodder = set_combine(sets.engaged, {})

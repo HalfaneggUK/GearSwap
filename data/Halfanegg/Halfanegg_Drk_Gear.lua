@@ -240,7 +240,7 @@ function init_gear_sets()
 	    hands="Sulev. Gauntlets +2",
 	    legs="Sulev. Cuisses +2",
 	    feet="Sulev. Leggings +2",
-	    neck="Abyssal Beads +2",
+	    neck="Loricate Torque +1",
 	    waist="Flume Belt +1",
 	    left_ear="Genmei Earring",
 	    right_ear="Etiolation Earring",

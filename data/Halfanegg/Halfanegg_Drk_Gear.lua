@@ -3,7 +3,7 @@ function user_setup()
 
   state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
   state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-  state.HybridMode:options('Normal')
+  state.HybridMode:options('Normal','DT')
   state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
   state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
@@ -240,7 +240,7 @@ function init_gear_sets()
 	    hands="Sulev. Gauntlets +2",
 	    legs="Sulev. Cuisses +2",
 	    feet="Sulev. Leggings +2",
-	    neck="Loricate Torque +1",
+	    neck="Abyssal Beads +2",
 	    waist="Flume Belt +1",
 	    left_ear="Genmei Earring",
 	    right_ear="Etiolation Earring",
@@ -254,17 +254,39 @@ function init_gear_sets()
 	sets.idle.Reraise = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
 
     -- Defense sets
-	sets.defense.PDT = {ammo="Staunch Tathlum",
-		head="Loess Barbuta +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Tartarus Platemail",hands="Sulev. Gauntlets +2",ring1="Moonbeam Ring",ring2="Moonbeam Ring",
-		back="Shadow Mantle",waist="Flume Belt",legs="Sulev. Cuisses +2",feet="Amm Greaves"}
+	sets.defense.PDT = {
+	    ammo="Staunch Tathlum +1",
+	    head="Sulevia's Mask +2",
+	    body="Tartarus Platemail",
+	    hands="Sulev. Gauntlets +2",
+	    legs="Sulev. Cuisses +2",
+	    feet="Sulev. Leggings +2",
+	    neck="Loricate Torque +1",
+	    waist="Flume Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
 
-	sets.defense.MDT = {ammo="Staunch Tathlum",
-		head="Loess Barbuta +1",neck="Warder's Charm +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Tartarus Platemail",hands="Sulev. Gauntlets +2",ring1="Moonbeam Ring",ring2="Moonbeam Ring",
-		back="Moonlight Cape",waist="Flume Belt",legs="Sulev. Cuisses +2",feet="Amm Greaves"}
+	sets.defense.MDT = {
+	    ammo="Staunch Tathlum +1",
+	    head="Sulevia's Mask +2",
+	    body="Tartarus Platemail",
+	    hands="Sulev. Gauntlets +2",
+	    legs="Sulev. Cuisses +2",
+	    feet="Sulev. Leggings +2",
+	    neck="Loricate Torque +1",
+	    waist="Flume Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
 
@@ -293,6 +315,22 @@ function init_gear_sets()
 	    left_ring="Niqmaddu Ring",
 	    right_ring="Hetairoi Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
+
+	sets.engaged.DT = {
+			ammo="Ginsen",
+			head="Sulevia's Mask +2",
+			body="Sulevia's Plate. +2",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Ioskeha Belt +1",
+			left_ear="Cessance Earring",
+			right_ear="Brutal Earring",
+			left_ring="Defending Ring",
+			right_ring="Moonlight Ring",
+			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.engaged.SomeAcc = {
@@ -332,7 +370,7 @@ function init_gear_sets()
 	    right_ring="Moonlight Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
-	sets.engaged.SomeAcc.PDT = {
+	sets.engaged.SomeAcc.DT = {
 	    ammo="Ginsen",
 	    head="Sulevia's Mask +2",
 	    body="Sulevia's Plate. +2",
@@ -347,9 +385,9 @@ function init_gear_sets()
 	    right_ring="Moonlight Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
-	sets.engaged.Acc.PDT = set_combine(sets.engaged.SomeAcc.PDT, {})
-	sets.engaged.FullAcc.PDT = set_combine(sets.engaged.Acc.PDT, {})
-	sets.engaged.Fodder.PDT = set_combine(sets.engaged.PDT, {})
+	sets.engaged.Acc.DT = set_combine(sets.engaged.SomeAcc.DT, {})
+	sets.engaged.FullAcc.DT = set_combine(sets.engaged.Acc.DT, {})
+	sets.engaged.Fodder.DT = set_combine(sets.engaged.DT, {})
 
 	sets.engaged.MDT = {
 	    ammo="Ginsen",

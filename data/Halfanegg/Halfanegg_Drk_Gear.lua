@@ -60,7 +60,7 @@ function init_gear_sets()
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Sulev. Cuisses +2",
 	    feet="Sulev. Leggings +2",
-	    neck="Abyssal Beads +2",
+	    neck="Voltsurge Torque",
 	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Etiolation Earring",
@@ -80,7 +80,7 @@ function init_gear_sets()
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Sulev. Cuisses +2",
 	    feet="Sulev. Leggings +2",
-	    neck="Abyssal Beads +2",
+	    neck="Voltsurge Torque",
 	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Etiolation Earring",
@@ -164,7 +164,7 @@ function init_gear_sets()
 	    head="Ratri Sallet",
 	    body="Ratri Plate",
 	    hands="Ratri Gadlings",
-	    legs="Sulev. Cuisses +2",
+	    legs="Fall. Flanchard +3",
 	    feet="Sulev. Leggings +2",
 	    neck="Abyssal Beads +2",
 	    waist="Fotia Belt",
@@ -192,7 +192,7 @@ function init_gear_sets()
 	    head={ name="Odyssean Helm", augments={'Weapon skill damage +4%','VIT+15','Accuracy+5',}},
 	    body="Ratri Plate",
 	    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +4%','VIT+8','Accuracy+12','Attack+9',}},
-	    legs="Sulev. Cuisses +2",
+	    legs="Fall. Flanchard +3",
 	    feet="Sulev. Leggings +2",
 	    neck="Abyssal Beads +2",
 	    waist="Fotia Belt",
@@ -246,7 +246,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
@@ -267,7 +267,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -285,7 +285,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -314,7 +314,7 @@ function init_gear_sets()
 	    right_ear="Brutal Earring",
 	    left_ring="Niqmaddu Ring",
 	    right_ring="Hetairoi Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.engaged.DT = {
@@ -325,12 +325,12 @@ function init_gear_sets()
 			legs="Sulev. Cuisses +2",
 			feet="Flam. Gambieras +2",
 			neck="Loricate Torque +1",
-			waist="Ioskeha Belt +1",
+			waist="Tempus Fugit",
 			left_ear="Cessance Earring",
 			right_ear="Brutal Earring",
 			left_ring="Defending Ring",
 			right_ring="Moonlight Ring",
-			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.engaged.SomeAcc = {
@@ -346,7 +346,7 @@ function init_gear_sets()
 	    right_ear="Telos Earring",
 	    left_ring="Niqmaddu Ring",
 	    right_ring="Chirich Ring +1",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.engaged.SomeAcc.DT = {
@@ -357,12 +357,12 @@ function init_gear_sets()
 			legs="Sulev. Cuisses +2",
 			feet="Flam. Gambieras +2",
 			neck="Loricate Torque +1",
-			waist="Ioskeha Belt +1",
+			waist="Tempus Fugit",
 			left_ear="Cessance Earring",
 			right_ear="Telos Earring",
 			left_ring="Defending Ring",
 			right_ring="Moonlight Ring",
-			back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {})
@@ -379,12 +379,12 @@ function init_gear_sets()
 	    legs="Sulev. Cuisses +2",
 	    feet="Flam. Gambieras +2",
 	    neck="Loricate Torque +1",
-	    waist="Ioskeha Belt +1",
+	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Brutal Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	sets.engaged.SomeAcc.DT = {
 	    ammo="Ginsen",
@@ -394,12 +394,12 @@ function init_gear_sets()
 	    legs="Sulev. Cuisses +2",
 	    feet="Flam. Gambieras +2",
 	    neck="Loricate Torque +1",
-	    waist="Ioskeha Belt +1",
+	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Telos Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	sets.engaged.Acc.DT = set_combine(sets.engaged.SomeAcc.DT, {})
 	sets.engaged.FullAcc.DT = set_combine(sets.engaged.Acc.DT, {})
@@ -413,12 +413,12 @@ function init_gear_sets()
 	    legs="Sulev. Cuisses +2",
 	    feet="Flam. Gambieras +2",
 	    neck="Loricate Torque +1",
-	    waist="Ioskeha Belt +1",
+	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Brutal Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	sets.engaged.SomeAcc.MDT = {
 	    ammo="Ginsen",
@@ -428,12 +428,12 @@ function init_gear_sets()
 	    legs="Sulev. Cuisses +2",
 	    feet="Flam. Gambieras +2",
 	    neck="Loricate Torque +1",
-	    waist="Ioskeha Belt +1",
+	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
 	    right_ear="Telos Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	sets.engaged.Acc.MDT = set_combine(sets.engaged.SomeAcc.MDT, {})
 	sets.engaged.FullAcc.MDT = set_combine(sets.engaged.Acc.MDT, {})

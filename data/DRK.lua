@@ -29,9 +29,9 @@ function job_setup()
 	  state.DrainSwapWeaponMode = M{'Never','300','1000','Always'}
 
 	--List of which WS you plan to use TP bonus WS with.
-	moonshade_ws = S{'Savage Blade','Requiescat','Resolution'}
+	moonshade_ws = S{'Savage Blade','Requiescat','Resolution','Torcleaver','Catastrophe'}
 
-	autows = 'Catastrophe'
+	autows = 'Torcleaver'
 	autofood = 'Soy Ramen'
 
 	update_melee_groups()

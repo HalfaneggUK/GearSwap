@@ -33,7 +33,7 @@ function init_gear_sets()
 
     sets.precast.JA['Elemental Siphon'] = {main="Espiritus",sub="Vox Grip",ammo="Esper Stone +1",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Gifted Earring",
-        body="Telchine Chasuble",hands="Baayami Cuffs",ring1="Stikini Ring +1",ring2="Stikini Ring",
+        body="Telchine Chasuble",hands="Baayami Cuffs",ring1="Evoker's Ring",ring2="Stikini Ring",
         back="Conveyance Cape",waist="Kobo Obi",legs="Telchine Braconi",feet="Beck. Pigaches +1"}
 
     sets.precast.JA['Mana Cede'] = {hands="Beck. Bracers +1"}
@@ -52,8 +52,8 @@ function init_gear_sets()
         waist="Incarnation Sash",
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
-        left_ring="Varar Ring +1",
-        right_ring="Stikini Ring +1",
+        left_ring="Varar Ring",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -187,12 +187,12 @@ function init_gear_sets()
 
     sets.midcast.Pet.BloodPactWard = {main="Espiritus",sub="Vox Grip",ammo="Sancus Sachet +1",
         head="Beckoner's Horn +1",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Gifted Earring",
-        body="Beck. Doublet +1",hands="Baayami Cuffs",ring1="Stikini Ring +1",ring2="Stikini Ring",
+        body="Beck. Doublet +1",hands="Baayami Cuffs",ring1="Evoker's Ring",ring2="Stikini Ring",
         back="Conveyance Cape",waist="Kobo Obi",legs="Baayami Slops",feet="Baayami Sabots"}
 
     sets.midcast.Pet.DebuffBloodPactWard = {main="Espiritus",sub="Vox Grip",ammo="Sancus Sachet +1",
         head="Beckoner's Horn +1",neck="Adad Amulet",ear1="Andoaa Earring",ear2="Enmerkar Earring",
-        body="Beck. Doublet +1",hands=gear.merlinic_magpact_hands,ring1="Stikini Ring +1",ring2="Stikini Ring",
+        body="Beck. Doublet +1",hands=gear.merlinic_magpact_hands,ring1="Evoker's Ring",ring2="Stikini Ring",
         back=gear.magic_jse_back,waist="Incarnation Sash",legs="Tali'ah Sera. +2",feet="Beck. Pigaches +1"}
 
     sets.midcast.Pet.DebuffBloodPactWard.Acc = sets.midcast.Pet.DebuffBloodPactWard
@@ -210,8 +210,8 @@ function init_gear_sets()
         waist="Incarnation Sash",
         left_ear="Lugalbanda Earring",
         right_ear="Gelos Earring",
-        left_ring="Varar Ring +1",
-        right_ring="Varar Ring +1",
+        left_ring="Varar Ring",
+        right_ring="Varar Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -230,8 +230,8 @@ function init_gear_sets()
         waist="Regal Belt",
         left_ear="Lugalbanda Earring",
         right_ear="Gelos Earring",
-        left_ring="Varar Ring +1",
-        right_ring="Varar Ring +1",
+        left_ring="Varar Ring",
+        right_ring="Varar Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -258,8 +258,8 @@ function init_gear_sets()
       waist="Regal Belt",
       left_ear="Lugalbanda Earring",
       right_ear="Gelos Earring",
-      left_ring="Varar Ring +1",
-      right_ring="Varar Ring +1",
+      left_ring="Varar Ring",
+      right_ring="Varar Ring",
       back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
   }
 
@@ -299,7 +299,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -317,7 +317,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -337,7 +337,7 @@ function init_gear_sets()
     -- Gridarvor: -5
     -- Glyphic Horn: -4
     -- Caller's Doublet +2/Glyphic Doublet: -4
-    -- Stikini Ring +1: -1
+    -- Evoker's Ring: -1
     -- Con. Pigaches +1: -4
     -- total: -18
 
@@ -357,7 +357,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -375,7 +375,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -393,7 +393,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 
@@ -411,7 +411,7 @@ function init_gear_sets()
         left_ear="Lugalbanda Earring",
         right_ear="Evans Earring",
         left_ring="Defending Ring",
-        right_ring="Stikini Ring +1",
+        right_ring="Evoker's Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',}},
     }
 

@@ -18,7 +18,7 @@ function user_setup()
 
 	-- Set up Jug Pet cycling and keybind Ctrl+F7
 	-- INPUT PREFERRED JUG PETS HERE
-	state.JugMode = M{['description']='Jug Mode', 'ScissorlegXerin','BlackbeardRandy','AttentiveIbuki','DroopyDortwin','WarlikePatrick','AcuexFamiliar'}
+	state.JugMode = M{['description']='Jug Mode', 'BouncingBertha','BlackbeardRandy','WarlikePatrick','SwoopingZhivago','ThreestarLynn'}
 	send_command('bind ^f7 gs c cycle JugMode')
 
 	-- Set up Monster Correlation Modes and keybind Alt+F7
@@ -179,15 +179,28 @@ function init_gear_sets()
 	sets.AccMaxTP = {ear1="Zennaroi Earring",ear2="Telos Earring"}
 
 				-- PET SIC & READY MOVES
-	sets.midcast.Pet.WS = {main=gear.PHYKumbha1,sub=gear.PHYKumbha2,ammo="Demonry Core",
-		head="Totemic Helm +1",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
-		body="Taeon Tabard",hands="Nukumi Manoplas +1",ring1="Varar Ring +1",ring2="Varar Ring +1",
-		back="Artio's Mantle",waist="Incarnation Sash",legs=gear.valorous_physical_pet_legs,feet="Totemic Gaiters +1"}
+	sets.midcast.Pet.WS = {
+	    main={ name="Arktoi", augments={'Accuracy+50','Pet: Accuracy+50','Pet: Attack+30',}},
+	    sub={ name="Kumbhakarna", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: Phys. dmg. taken -2%','Pet: TP Bonus+160',}},
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Valorous Mask", augments={'Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Dbl. Atk."+2','Pet: Attack+15 Pet: Rng.Atk.+15',}},
+	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    hands="Nukumi Manoplas",
+	    legs="Tali'ah Sera. +2",
+	    feet={ name="Valorous Greaves", augments={'Pet: "Mag.Atk.Bns."+29','Pet: Phys. dmg. taken -3%',}},
+	    neck="Shulmanu Collar",
+	    waist="Incarnation Sash",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Varar Ring",
+	    right_ring="Varar Ring",
+	    back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Haste+8',}},
+	}
 
 	sets.midcast.Pet.SomeAcc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub=gear.PHYKumbha2,head="Totemic Helm +1",hands="Regimen Mittens"})
 	sets.midcast.Pet.Acc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub="Hunahpu",head="Totemic Helm +1",hands="Regimen Mittens"})
 	sets.midcast.Pet.FullAcc = set_combine(sets.midcast.Pet.WS, {main="Kerehcatl",sub="Hunahpu",head="Totemic Helm +1",hands="Regimen Mittens"})
-				
+
 	sets.midcast.Pet.MagicReady = {main=gear.MABKumbha,sub=gear.PDTMABKumbha,ammo="Demonry Core",
 		head=gear.valorous_pet_head,neck="Adad Amulet",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
 		body=gear.valorous_pet_body,hands="Nukumi Manoplas +1",ring1="Varar Ring +1",ring2="Varar Ring +1",
@@ -205,23 +218,80 @@ function init_gear_sets()
 	-- RESTING
 	sets.resting = {}
 
-	sets.idle = {main="Izizoeksi",sub=gear.PDTMABKumbha,ammo="Staunch Tathlum",
-		head="Jumalik Helm",neck="Loricate Torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
-		body="Jumalik Mail",hands="Macabre Gaunt. +1",ring1="Defending Ring",ring2="Sheltered Ring",
-		back="Solemnity Cape",waist="Flume Belt",legs="Tali'ah Sera. +2",feet="Skd. Jambeaux +1"}
+	sets.idle = {
+	    main={ name="Skullrender", augments={'DMG:+15','Pet: Accuracy+20','Pet: Attack+20',}},
+	    sub={ name="Skullrender", augments={'DMG:+15','Pet: Accuracy+20','Pet: Attack+20',}},
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
+	    body="Tartarus Platemail",
+	    hands="Meg. Gloves +2",
+	    legs="Tali'ah Sera. +2",
+	    feet={ name="Valorous Greaves", augments={'Pet: "Mag.Atk.Bns."+29','Pet: Phys. dmg. taken -3%',}},
+	    neck="Loricate Torque +1",
+	    waist="Flume Belt +1",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
+	    back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Haste+8',}},
+	}
 
 	sets.idle.Refresh = set_combine(sets.idle, {})
 	sets.idle.Reraise = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
 
-	sets.idle.Pet = {main="Izizoeksi",sub=gear.PDTMABKumbha,ammo="Demonry Core",
-		head="Anwig Salade",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
-		body="Tot. Jackcoat +3",hands="Ankusa Gloves +1",ring1="Defending Ring",ring2="Sheltered Ring",
-		back="Artio's Mantle",waist="Isa Belt",legs="Tali'ah Sera. +2",feet="Ankusa Gaiters +3"}
+	sets.idle.Pet = {
+	    main={ name="Arktoi", augments={'Accuracy+50','Pet: Accuracy+50','Pet: Attack+30',}},
+	    sub="Izizoeksi",
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Anwig Salade", augments={'Attack+3','Pet: Damage taken -10%','Attack+3','Pet: "Regen"+1',}},
+	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    hands={ name="Ankusa Gloves +1", augments={'Enhances "Beast Affinity" effect',}},
+	    legs="Tali'ah Sera. +2",
+	    feet={ name="Valorous Greaves", augments={'Pet: "Mag.Atk.Bns."+29','Pet: Phys. dmg. taken -3%',}},
+	    neck="Shulmanu Collar",
+	    waist="Incarnation Sash",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Varar Ring",
+	    right_ring="Varar Ring",
+	    back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Haste+8',}},
+	}
 
-	sets.idle.Pet.Engaged = {ammo="Demonry Core",
-		head="Anwig Salade",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
-		body="Tot. Jackcoat +3",hands="Ankusa Gloves +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Artio's Mantle",waist="Isa Belt",legs="Tali'ah Sera. +2",feet="Ankusa Gaiters +3"}
+	sets.idle.Pet.Engaged = {
+	    main={ name="Arktoi", augments={'Accuracy+50','Pet: Accuracy+50','Pet: Attack+30',}},
+	    sub="Izizoeksi",
+	    ammo="Staunch Tathlum +1",
+	    head={ name="Anwig Salade", augments={'Attack+3','Pet: Damage taken -10%','Attack+3','Pet: "Regen"+1',}},
+	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    hands={ name="Ankusa Gloves +1", augments={'Enhances "Beast Affinity" effect',}},
+	    legs="Tali'ah Sera. +2",
+	    feet={ name="Valorous Greaves", augments={'Pet: "Mag.Atk.Bns."+29','Pet: Phys. dmg. taken -3%',}},
+	    neck="Shulmanu Collar",
+	    waist="Incarnation Sash",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Varar Ring",
+	    right_ring="Varar Ring",
+	    back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Haste+8',}},
+	}
+
+	sets.idle.Pet.Engaged.DD = {
+			main={ name="Arktoi", augments={'Accuracy+50','Pet: Accuracy+50','Pet: Attack+30',}},
+			sub="Izizoeksi",
+			ammo="Staunch Tathlum +1",
+			head={ name="Anwig Salade", augments={'Attack+3','Pet: Damage taken -10%','Attack+3','Pet: "Regen"+1',}},
+			body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+			hands={ name="Ankusa Gloves +1", augments={'Enhances "Beast Affinity" effect',}},
+			legs="Tali'ah Sera. +2",
+			feet={ name="Valorous Greaves", augments={'Pet: "Mag.Atk.Bns."+29','Pet: Phys. dmg. taken -3%',}},
+			neck="Shulmanu Collar",
+			waist="Incarnation Sash",
+			left_ear="Genmei Earring",
+			right_ear="Etiolation Earring",
+			left_ring="Defending Ring",
+			right_ring="Varar Ring",
+			back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Haste+8',}},
+	}
 
 	-- DEFENSE SETS
 	sets.defense.PDT = {ammo="Staunch Tathlum",
@@ -379,7 +449,7 @@ function init_gear_sets()
 	sets.Knockback = {}
 	sets.SuppaBrutal = {ear1="Suppanomimi", ear2="Sherida Earring"}
 	sets.DWEarrings = {ear1="Dudgeon Earring",ear2="Heartseeker Earring"}
-	
+
 	-- Weapons sets
 	sets.weapons.PetPDTAxe = {main ="Izizoeksi"}
 	sets.weapons.DualWeapons = {main ="Izizoeksi",sub="Hunahpu"}
@@ -461,14 +531,14 @@ end
 function select_default_macro_book()
 	-- Default macro set/book
 	if player.sub_job == 'DNC' then
-		set_macro_page(6, 16)
+		set_macro_page(1, 7)
 	elseif player.sub_job == 'NIN' then
-		set_macro_page(4, 16)
+		set_macro_page(1, 7)
 	elseif player.sub_job == 'THF' then
-		set_macro_page(6, 20)
+		set_macro_page(1, 7)
 	elseif player.sub_job == 'RUN' then
-		set_macro_page(7, 20)
+		set_macro_page(1, 7)
 	else
-		set_macro_page(6, 20)
+		set_macro_page(1, 7)
 	end
 end

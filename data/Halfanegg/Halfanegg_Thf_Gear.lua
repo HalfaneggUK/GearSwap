@@ -287,16 +287,16 @@ function init_gear_sets()
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Ashera Harness",
-	    hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+	    hands="Meg. Gloves +2",
 	    legs="Pill. Culottes +3",
 	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-	    neck="Asn. Gorget +2",
-	    waist="Reiki Yotai",
-	    left_ear="Telos Earring",
-	    right_ear="Sherida Earring",
-	    left_ring="Epona's Ring",
-	    right_ring="Hetairoi Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+	    neck="Loricate Torque +1",
+	    waist="Flume Belt +1",
+			left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
+	    back="Moonlight Cape",
 	}
 
   sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
@@ -321,7 +321,7 @@ function init_gear_sets()
 	    right_ear="Sherida Earring",
 	    left_ring="Moonlight Ring",
 	    right_ring="Defending Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
   sets.defense.MDT = {
@@ -337,7 +337,7 @@ function init_gear_sets()
 	    right_ear="Sherida Earring",
 	    left_ring="Moonlight Ring",
 	    right_ring="Defending Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 	sets.defense.MEVA = {
 	    ammo="Ginsen",
@@ -352,7 +352,7 @@ function init_gear_sets()
 	    right_ear="Sherida Earring",
 	    left_ring="Moonlight Ring",
 	    right_ring="Defending Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 

@@ -1,9 +1,9 @@
 function user_setup()
 	-- Options: Override default values
 
-  state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
-  state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-  state.HybridMode:options('Normal','DT')
+  state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc')
+  state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc')
+  state.HybridMode:options('Normal','Hybrid')
   state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
   state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
@@ -171,7 +171,7 @@ function init_gear_sets()
 	    left_ear="Moonshade Earring",
 	    right_ear="Ishvara Earring",
 	    left_ring="Niqmaddu Ring",
-	    right_ring="Karieyh Ring",
+	    right_ring="Epaminondas's Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 
@@ -199,7 +199,7 @@ function init_gear_sets()
 	    left_ear="Moonshade Earring",
 	    right_ear="Ishvara Earring",
 	    left_ring="Niqmaddu Ring",
-	    right_ring="Karieyh Ring",
+	    right_ring="Epaminondas's Ring",
 	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
   sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS['Torcleaver'], {
@@ -246,7 +246,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
@@ -267,7 +267,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -285,7 +285,7 @@ function init_gear_sets()
 	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -317,7 +317,26 @@ function init_gear_sets()
 	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
-	sets.engaged.DT = {
+	sets.engaged.SomeAcc = {
+	    ammo="Seeth. Bomblet +1",
+	    head="Flam. Zucchetto +2",
+	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    hands={ name="Emi. Gauntlets +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    legs="Sulev. Cuisses +2",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Cessance Earring",
+	    right_ear="Telos Earring",
+	    left_ring="Chirich Ring +1",
+	    right_ring="Niqmaddu Ring",
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
+
+	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {})
+	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {})
+
+	sets.engaged.Hybrid = {
 			ammo="Ginsen",
 			head="Sulevia's Mask +2",
 			body="Sulevia's Plate. +2",
@@ -333,23 +352,7 @@ function init_gear_sets()
 			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
-	sets.engaged.SomeAcc = {
-	    ammo="Ginsen",
-	    head="Flam. Zucchetto +2",
-	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
-	    hands={ name="Emi. Gauntlets +1", augments={'HP+65','DEX+12','Accuracy+20',}},
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Abyssal Beads +2",
-	    waist="Ioskeha Belt +1",
-	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Niqmaddu Ring",
-	    right_ring="Chirich Ring +1",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-
-	sets.engaged.SomeAcc.DT = {
+	sets.engaged.SomeAcc.Hybrid = {
 			ammo="Ginsen",
 			head="Sulevia's Mask +2",
 			body="Sulevia's Plate. +2",
@@ -365,135 +368,89 @@ function init_gear_sets()
 			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 
-	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {})
-	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {})
-  sets.engaged.Fodder = set_combine(sets.engaged, {})
+	sets.engaged.Acc.Hybrid = set_combine(sets.engaged.SomeAcc.Hybrid, {})
+	sets.engaged.FullAcc.Hybrid = set_combine(sets.engaged.Acc.Hybrid, {})
 
---[[
-
-	sets.engaged.PDT = {
-	    ammo="Ginsen",
-	    head="Sulevia's Mask +2",
-	    body="Sulevia's Plate. +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Tempus Fugit",
-	    left_ear="Cessance Earring",
-	    right_ear="Brutal Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-	sets.engaged.SomeAcc.DT = {
-	    ammo="Ginsen",
-	    head="Sulevia's Mask +2",
-	    body="Sulevia's Plate. +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Tempus Fugit",
-	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-	sets.engaged.Acc.DT = set_combine(sets.engaged.SomeAcc.DT, {})
-	sets.engaged.FullAcc.DT = set_combine(sets.engaged.Acc.DT, {})
-	sets.engaged.Fodder.DT = set_combine(sets.engaged.DT, {})
-
-	sets.engaged.MDT = {
-	    ammo="Ginsen",
-	    head="Sulevia's Mask +2",
-	    body="Sulevia's Plate. +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Tempus Fugit",
-	    left_ear="Cessance Earring",
-	    right_ear="Brutal Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-	sets.engaged.SomeAcc.MDT = {
-	    ammo="Ginsen",
-	    head="Sulevia's Mask +2",
-	    body="Sulevia's Plate. +2",
-	    hands="Sulev. Gauntlets +2",
-	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
-	    neck="Loricate Torque +1",
-	    waist="Tempus Fugit",
-	    left_ear="Cessance Earring",
-	    right_ear="Telos Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
-	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
-	sets.engaged.Acc.MDT = set_combine(sets.engaged.SomeAcc.MDT, {})
-	sets.engaged.FullAcc.MDT = set_combine(sets.engaged.Acc.MDT, {})
-	sets.engaged.Fodder.MDT = set_combine(sets.engaged.MDT, {})
-
-  -- Variations for TP weapon and (optional) offense/defense modes.  Code will fall back on previous
-  -- sets if more refined versions aren't defined.
-  -- If you create a set with both offense and defense modes, the offense mode should be first.
-  -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	-- Apocalypse melee sets
-  sets.engaged.Apocalypse = {}
-	sets.engaged.Apocalypse.SomeAcc = {}
-	sets.engaged.Apocalypse.Acc = {}
-	sets.engaged.Apocalypse.FullAcc = {}
-	sets.engaged.Apocalypse.Fodder = {}
 
-  sets.engaged.Apocalypse.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.AM = {}
-	sets.engaged.Apocalypse.Acc.AM = {}
-	sets.engaged.Apocalypse.FullAcc.AM = {}
-	sets.engaged.Apocalypse.Fodder.AM = {}
 
-	sets.engaged.Apocalypse.PDT = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT = {}
-	sets.engaged.Apocalypse.Acc.PDT = {}
-	sets.engaged.Apocalypse.FullAcc.PDT = {}
-	sets.engaged.Apocalypse.Fodder.PDT = {}
+	sets.engaged.Apocalypse = {
+			ammo="Focal Orb",
+			head="Flam. Zucchetto +2",
+			body={ name="Valorous Mail", augments={'Accuracy+28','"Dbl.Atk."+5','Attack+12',}},
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Abyssal Beads +2",
+			waist="Ioskeha Belt +1",
+			left_ear="Cessance Earring",
+			right_ear="Brutal Earring",
+			left_ring="Niqmaddu Ring",
+			right_ring="Petrov Ring",
+			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
-	sets.engaged.Apocalypse.PDT.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.AM = {}
+	sets.engaged.Apocalypse.SomeAcc = {
+	    ammo="Seeth. Bomblet +1",
+	    head="Flam. Zucchetto +2",
+	    body={ name="Emicho Haubert +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    hands={ name="Emi. Gauntlets +1", augments={'HP+65','DEX+12','Accuracy+20',}},
+	    legs="Sulev. Cuisses +2",
+	    feet="Flam. Gambieras +2",
+	    neck="Abyssal Beads +2",
+	    waist="Ioskeha Belt +1",
+	    left_ear="Cessance Earring",
+	    right_ear="Telos Earring",
+	    left_ring="Chirich Ring +1",
+	    right_ring="Niqmaddu Ring",
+	    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
-	sets.engaged.Apocalypse.PDT.Charge = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Charge = {}
-	sets.engaged.Apocalypse.Acc.PDT.Charge = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Charge = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Charge = {}
+	sets.engaged.Apocalypse.Acc = set_combine(sets.engaged.Apocalypse.SomeAcc, {})
+	sets.engaged.Apocalypse.FullAcc = set_combine(sets.engaged.Apocalypse.Acc, {})
 
-	sets.engaged.Apocalypse.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Charge.AM = {}
+  sets.engaged.Apocalypse.AM = set_combine(sets.engaged.Apocalypse, {})
+	sets.engaged.Apocalypse.SomeAcc.AM = set_combine(sets.engaged.Apocalypse, {})
+	sets.engaged.Apocalypse.Acc.AM = set_combine(sets.engaged.Apocalypse, {})
+	sets.engaged.Apocalypse.FullAcc.AM = set_combine(sets.engaged.Apocalypse, {})
 
-	sets.engaged.Apocalypse.MDT = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT = {}
-	sets.engaged.Apocalypse.Acc.MDT = {}
-	sets.engaged.Apocalypse.FullAcc.MDT = {}
-	sets.engaged.Apocalypse.Fodder.MDT = {}
+	sets.engaged.Apocalypse.Hybrid = {
+			ammo="Ginsen",
+			head="Sulevia's Mask +2",
+			body="Sulevia's Plate. +2",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Tempus Fugit",
+			left_ear="Cessance Earring",
+			right_ear="Brutal Earring",
+			left_ring="Defending Ring",
+			right_ring="Moonlight Ring",
+			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
-	sets.engaged.Apocalypse.MDT.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT.AM = {}
-	sets.engaged.Apocalypse.Acc.MDT.AM = {}
-	sets.engaged.Apocalypse.FullAcc.MDT.AM = {}
-	sets.engaged.Apocalypse.Fodder.MDT.AM = {}
+	sets.engaged.Apocalypse.SomeAcc.Hybrid = {
+			ammo="Ginsen",
+			head="Sulevia's Mask +2",
+			body="Sulevia's Plate. +2",
+			hands="Sulev. Gauntlets +2",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2",
+			neck="Loricate Torque +1",
+			waist="Tempus Fugit",
+			left_ear="Cessance Earring",
+			right_ear="Telos Earring",
+			left_ring="Defending Ring",
+			right_ring="Moonlight Ring",
+			back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
 
-]]--
+	sets.engaged.Apocalypse.Acc.Hybrid = set_combine(sets.engaged.SomeAcc.Hybrid, {})
+	sets.engaged.Apocalypse.FullAcc.Hybrid = set_combine(sets.engaged.Acc.Hybrid, {})
+
+
 	--Extra Special Sets
 
 	sets.buff.Souleater = {}

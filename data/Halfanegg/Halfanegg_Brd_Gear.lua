@@ -280,7 +280,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Ayanmo Ring",
-	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.idle.Refresh = {
@@ -296,7 +296,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 	    right_ear="Graiai Earring",
 			left_ring="Defending Ring",
 	    right_ring="Inyanga Ring",
-	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.idle.Melee = {
@@ -330,7 +330,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			right_ear="Cessance Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Ayanmo Ring",
-	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.defense.MDT = {
@@ -346,7 +346,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			right_ear="Cessance Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Ayanmo Ring",
-	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
+	    back="Moonlight Cape",
 	}
 
 	sets.Kiting = {}

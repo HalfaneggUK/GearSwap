@@ -69,6 +69,25 @@ function job_precast(spell, spellMap, eventArgs)
 
 end
 
+function job_filtered_action(spell, eventArgs)
+	if spell.type == 'WeaponSkill' then
+		local available_ws = S(windower.ffxi.get_abilities().weapon_skills)
+		-- WS 962 is Slice, meaning a Scythe is equipped.
+		if available_ws:contains(96) then
+            if spell.english == "Torcleaver" then
+				windower.chat.input('/ws "Catastrophe '..spell.target.raw)
+                cancel_spell()
+				eventArgs.cancel = true
+            elseif spell.english == "Shockwave" then
+                send_command('@input /ws "Entropy" '..spell.target.raw)
+                cancel_spell()
+				eventArgs.cancel = true
+            end
+        end
+	end
+end
+
+
 function job_aftercast(spell, spellMap, eventArgs)
     if not spell.interrupted then
 		if (spell.english == 'Drain II' or spell.english == 'Drain III') and state.DrainSwapWeaponMode.value ~= 'Never' then

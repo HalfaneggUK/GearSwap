@@ -37,11 +37,11 @@ state.DisplayMode = M(true, 'Display Mode') --Set this to false if you don't wan
 --}
 
 --Options for automation.
-state.ReEquip 		  = M(true, 'ReEquip Mode')		 --Set this to false if you don't want to equip your current Weapon set when you aren't wearing any weapons.
+state.ReEquip 		  = M(false, 'ReEquip Mode')		 --Set this to false if you don't want to equip your current Weapon set when you aren't wearing any weapons.
 state.AutoArts 		  = M(true, 'AutoArts') 		 --Set this to false if you don't want to automatically try to keep up Solace/Arts.
 state.CancelStoneskin = M(true, 'Cancel Stone Skin') --Set this to false if you don't want to automatically cancel stoneskin when you're slept.
 state.SkipProcWeapons = M(true, 'Skip Proc Weapons') --Set this to false if you want to display weapon sets fulltime rather than just Aby/Voidwatch.
-state.NotifyBuffs	  = M(false, 'Notify Buffs') 	 --Set this to true if you want to notify your party when you recieve a specific buff/debuff. (List Below)
+state.NotifyBuffs	  = M(true, 'Notify Buffs') 	 --Set this to true if you want to notify your party when you recieve a specific buff/debuff. (List Below)
 
 --[[Global binds you may want to change.
 	Bind special characters.
@@ -98,4 +98,4 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Kaquljaan','Ajjub Bow','Baqil Staff','Ixtab','Tamaxchi','Otomi Helm','Otomi Gloves','Kaabnax Hat',
 'Kaabnax Trousers','Ejekamal Mask','Ejekamal Boots','Quiahuiz Helm','Quiahuiz Trousers','Uk\'uxkaj Cap'}
 
-NotifyBuffs = S{'doom','petrification'}
+NotifyBuffs = S{'accuracy down','attack down','bio','blind','curse','defense down','disease','doom','paralysis','petrification','poison','plague','silence','sleep','slow'}

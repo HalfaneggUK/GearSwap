@@ -47,14 +47,6 @@
 function get_sets()
     -- Load and initialize the include file.
     include('Sel-Include.lua')
-
-    if player.sub_job == 'RDM' then
-    send_command('wait 2;input /lockstyleset 4')
-    elseif player.sub_job == 'WHM' then
-    send_command('wait 2;input /lockstyleset 4')
-    else
-    send_command('wait 2;input /lockstyleset 4')
-    end
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.

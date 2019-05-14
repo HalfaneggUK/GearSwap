@@ -18,15 +18,15 @@ function job_setup()
 	state.Buff['Double Shot'] = buffactive['Double Shot'] or false
 	state.Buff['Unlimited Shot'] = buffactive['Unlimited Shot'] or false
 	state.Buff['Velocity Shot'] = buffactive['Velocity Shot'] or false
-	
+
 	--List of which WS you plan to use TP bonus WS with.
-	moonshade_ws = S{'Jishnu\'s Radiance','Empyreal Arrow','Last Stand'}
-	
-	autows = "Last Stand"
-	rangedautows = "Last Stand"
+	moonshade_ws = S{'Jishnu\'s Radiance','Empyreal Arrow','Last Stand','Trueflight'}
+
+	autows = "Trueflight"
+	rangedautows = "Trueflight"
 	autofood = 'Soy Ramen'
 	ammostock = 198
-	
+
 	init_job_states({"Capacity","AutoRuneMode","AutoTrustMode","AutoWSMode","AutoShadowMode","AutoFoodMode","RngHelper","AutoStunMode","AutoDefenseMode","AutoBuffMode",},{"AutoSambaMode","Weapons","OffenseMode","RangedMode","WeaponskillMode","IdleMode","Passive","RuneElement","TreasureMode",})
 end
 
@@ -64,7 +64,7 @@ function job_post_precast(spell, spellMap, eventArgs)
 				if sets.AccMaxTP then
 					equip(sets.AccMaxTP)
 				end
-						
+
 			elseif sets.MaxTP then
 					equip(sets.MaxTP)
 			end

@@ -9,8 +9,8 @@ function user_setup()
     state.PhysicalDefenseMode:options('PDT')
 		state.MagicalDefenseMode:options('MDT')
 		state.ResistDefenseMode:options('MEVA')
-		--state.Weapons:options('TwashTP','TwashACC','Aeneas','Kaja','Dummy','Dagger','Club','Sword','Staff','Scythe','Polearm')
-		state.Weapons:options('TwashACC','Dagger','Club','Sword','Staff','Scythe','Polearm')
+		state.Weapons:options('TwashTP','TwashACC','Aeneas','Tauret','Dummy')
+		--state.Weapons:options('TwashACC','Dagger','Club','Sword','Staff','Scythe','Polearm')
 
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','Suppa','DWEarrings','DWMax'}
 		state.AmbushMode = M(false, 'Ambush Mode')
@@ -39,8 +39,6 @@ function init_gear_sets()
     --------------------------------------
 
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {hands="Plunderer's Armlets +1",feet="Skulk. Poulaines"})
-  sets.ExtraRegen = {}
-  sets.Kiting = {feet="Skadi's Jambeaux +1"}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
@@ -56,17 +54,17 @@ function init_gear_sets()
 	sets.Ambush = {} --body="Plunderer's Vest +1"
 
 	-- Weapons sets
-	--sets.weapons.TwashTP = {main="Twashtar",sub="Centovente"}
-	sets.weapons.TwashACC = {main="Twashtar",sub="Kaja Knife"}
---sets.weapons.Aeneas = {main="Aeneas",sub="Twashtar"}
---sets.weapons.Kaja = {main="Kaja Knife",sub="Twashtar"}
-	--sets.weapons.Dummy = {main="Asteria",sub=empty}
-	sets.weapons.Dagger = {main="Qutrub Knife",sub=empty}
-	sets.weapons.Club = {main="Shellbuster",sub=empty}
-	sets.weapons.Sword = {main="Bronze Sword",sub=empty}
-	sets.weapons.Staff = {main="Earth Staff",sub=empty}
-	sets.weapons.Scythe = {main="Lost Sickle"}
-	sets.weapons.Polearm = {main="Tzee Xicu's Blade"}
+	sets.weapons.TwashTP = {main="Twashtar",sub="Centovente"}
+	sets.weapons.TwashACC = {main="Twashtar",sub="Tauret"}
+	sets.weapons.Aeneas = {main="Aeneas",sub="Twashtar"}
+	sets.weapons.Tauret = {main="Tauret",sub="Twashtar"}
+	sets.weapons.Dummy = {main="Tauret",sub=empty}
+	--sets.weapons.Dagger = {main="Qutrub Knife",sub=empty}
+	--sets.weapons.Club = {main="Shellbuster",sub=empty}
+	--sets.weapons.Sword = {main="Bronze Sword",sub=empty}
+	--sets.weapons.Staff = {main="Earth Staff",sub=empty}
+	--sets.weapons.Scythe = {main="Lost Sickle"}
+	--sets.weapons.Polearm = {main="Tzee Xicu's Blade"}
 
   -- Actions we want to use to tag TH.
   sets.precast.Step = {ammo="Falcon Eye",
@@ -143,55 +141,23 @@ function init_gear_sets()
 	    right_ring="Ramuh Ring",
 	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 	}
-  sets.precast.WS.SomeAcc = {
-	    ammo="Jukukik Feather",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
-	    body={ name="Plunderer's Vest +3", augments={'Enhances "Ambush" effect',}},
-	    hands="Meg. Gloves +2",
-	    legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-	    neck="Asn. Gorget +2",
-	    waist="Grunfeld Rope",
-	    left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
-	    right_ear="Sherida Earring",
-	    left_ring="Ilabrat Ring",
-	    right_ring="Ramuh Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-	}
-
-  sets.precast.WS.Acc = {
-	    ammo="Jukukik Feather",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
-	    body={ name="Plunderer's Vest +3", augments={'Enhances "Ambush" effect',}},
-	    hands="Meg. Gloves +2",
-	    legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-	    neck="Asn. Gorget +2",
-	    waist="Grunfeld Rope",
-	    left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
-	    right_ear="Sherida Earring",
-	    left_ring="Ilabrat Ring",
-	    right_ring="Ramuh Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-	}
-	sets.precast.WS.FullAcc = {
-	    ammo="Jukukik Feather",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
-	    body={ name="Plunderer's Vest +3", augments={'Enhances "Ambush" effect',}},
-	    hands="Meg. Gloves +2",
-	    legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-	    neck="Asn. Gorget +2",
-	    waist="Grunfeld Rope",
-	    left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
-	    right_ear="Sherida Earring",
-	    left_ring="Ilabrat Ring",
-	    right_ring="Ramuh Ring",
-	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-	}
 
   -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-  sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS["Rudra's Storm"])
+  sets.precast.WS["Rudra's Storm"] = {
+	    ammo="Jukukik Feather",
+	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+	    body={ name="Plunderer's Vest +3", augments={'Enhances "Ambush" effect',}},
+	    hands="Meg. Gloves +2",
+	    legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
+	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
+	    neck="Asn. Gorget +2",
+	    waist="Grunfeld Rope",
+	    left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+	    right_ear="Sherida Earring",
+	    left_ring="Ilabrat Ring",
+	    right_ring="Ramuh Ring",
+	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+	}
   sets.precast.WS["Rudra's Storm"].SomeAcc = set_combine(sets.precast.WS["Rudra's Storm"])
   sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS["Rudra's Storm"])
 	sets.precast.WS["Rudra's Storm"].FullAcc = set_combine(sets.precast.WS["Rudra's Storm"])
@@ -200,32 +166,32 @@ function init_gear_sets()
   sets.precast.WS["Rudra's Storm"].TA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1"})
   sets.precast.WS["Rudra's Storm"].SATA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1"})
 
-  sets.precast.WS["Mandalic Stab"] = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Mandalic Stab"].SomeAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS["Mandalic Stab"].Acc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS["Mandalic Stab"].FullAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS["Mandalic Stab"].Fodder = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Mandalic Stab"].SA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Mandalic Stab"].TA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Mandalic Stab"].SATA = set_combine(sets.precast.WS["Rudra's Storm"])
+  sets.precast.WS["Mandalic Stab"] = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Mandalic Stab"].SomeAcc = set_combine(sets.precast.WS, {})
+	sets.precast.WS["Mandalic Stab"].Acc = set_combine(sets.precast.WS, {})
+	sets.precast.WS["Mandalic Stab"].FullAcc = set_combine(sets.precast.WS, {})
+	sets.precast.WS["Mandalic Stab"].Fodder = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Mandalic Stab"].SA = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Mandalic Stab"].TA = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Mandalic Stab"].SATA = set_combine(sets.precast.WS, {})
 
-  sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].SomeAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].Acc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS["Shark Bite"].FullAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].Fodder = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].SA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].TA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS["Shark Bite"].SATA = set_combine(sets.precast.WS["Rudra's Storm"])
+  sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].SomeAcc = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].Acc = set_combine(sets.precast.WS, {})
+	sets.precast.WS["Shark Bite"].FullAcc = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].Fodder = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].SA = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].TA = set_combine(sets.precast.WS, {})
+  sets.precast.WS["Shark Bite"].SATA = set_combine(sets.precast.WS, {})
 
-  sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS['Evisceration'].SomeAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS['Evisceration'].FullAcc = set_combine(sets.precast.WS["Rudra's Storm"])
-	sets.precast.WS['Evisceration'].Fodder = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS['Evisceration'].SA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS['Evisceration'].TA = set_combine(sets.precast.WS["Rudra's Storm"])
-  sets.precast.WS['Evisceration'].SATA = set_combine(sets.precast.WS["Rudra's Storm"])
+  sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {})
+  sets.precast.WS['Evisceration'].SomeAcc = set_combine(sets.precast.WS, {})
+  sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Evisceration'].FullAcc = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Evisceration'].Fodder = set_combine(sets.precast.WS, {})
+  sets.precast.WS['Evisceration'].SA = set_combine(sets.precast.WS, {})
+  sets.precast.WS['Evisceration'].TA = set_combine(sets.precast.WS, {})
+  sets.precast.WS['Evisceration'].SATA = set_combine(sets.precast.WS, {})
 
   sets.precast.WS['Last Stand'] = {
       head="Mummu Bonnet +2",neck="Fotia Gorget",ear1="Clearview Earring",ear2="Neritic Earring",
@@ -286,17 +252,17 @@ function init_gear_sets()
   sets.idle = {
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
-	    body="Ashera Harness",
-	    hands="Meg. Gloves +2",
+	    body="Pillager's Vest +3",
+	    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	    legs="Pill. Culottes +3",
 	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-	    neck="Loricate Torque +1",
-	    waist="Flume Belt +1",
-			left_ear="Genmei Earring",
-	    right_ear="Etiolation Earring",
-	    left_ring="Defending Ring",
-	    right_ring="Moonlight Ring",
-	    back="Moonlight Cape",
+	    neck="Asn. Gorget +2",
+	    waist="Reiki Yotai",
+	    left_ear="Telos Earring",
+	    right_ear="Sherida Earring",
+	    left_ring="Epona's Ring",
+	    right_ring="Hetairoi Ring",
+	    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	}
 
   sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
@@ -309,49 +275,49 @@ function init_gear_sets()
     -- Defense sets
 
   sets.defense.PDT = {
-	    ammo="Ginsen",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+	    ammo="Staunch Tathlum +1",
+	    head="Meghanada Visor +2",
 	    body="Ashera Harness",
 	    hands="Meg. Gloves +2",
-	    legs="Pill. Culottes +3",
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
+	    legs="Meg. Chausses +2",
+	    feet="Meg. Jam. +2",
 	    neck="Loricate Torque +1",
 	    waist="Flume Belt +1",
 	    left_ear="Genmei Earring",
-	    right_ear="Sherida Earring",
-	    left_ring="Moonlight Ring",
-	    right_ring="Defending Ring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 
   sets.defense.MDT = {
-	    ammo="Ginsen",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+	    ammo="Staunch Tathlum +1",
+	    head="Meghanada Visor +2",
 	    body="Ashera Harness",
 	    hands="Meg. Gloves +2",
-	    legs="Pill. Culottes +3",
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
+	    legs="Meg. Chausses +2",
+	    feet="Meg. Jam. +2",
 	    neck="Loricate Torque +1",
 	    waist="Flume Belt +1",
 	    left_ear="Genmei Earring",
-	    right_ear="Sherida Earring",
-	    left_ring="Moonlight Ring",
-	    right_ring="Defending Ring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 	sets.defense.MEVA = {
-	    ammo="Ginsen",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+	    ammo="Staunch Tathlum +1",
+	    head="Meghanada Visor +2",
 	    body="Ashera Harness",
 	    hands="Meg. Gloves +2",
-	    legs="Pill. Culottes +3",
-	    feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
+	    legs="Meg. Chausses +2",
+	    feet="Meg. Jam. +2",
 	    neck="Loricate Torque +1",
 	    waist="Flume Belt +1",
 	    left_ear="Genmei Earring",
-	    right_ear="Sherida Earring",
-	    left_ring="Moonlight Ring",
-	    right_ring="Defending Ring",
+	    right_ear="Etiolation Earring",
+	    left_ring="Defending Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 
@@ -378,8 +344,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.SomeAcc = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Pillager's Vest +3",
@@ -396,8 +360,6 @@ function init_gear_sets()
 	}
 
 	sets.engaged.Acc = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Pillager's Vest +3",
@@ -414,8 +376,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.FullAcc = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Pillager's Vest +3",
@@ -432,8 +392,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.Fodder = {
-	    ammo="Ginsen",
-	    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 	    body="Pillager's Vest +3",
 	    hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
 	    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
@@ -448,8 +406,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.PDT = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Ashera Harness",
@@ -466,8 +422,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.SomeAcc.PDT = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Ashera Harness",
@@ -484,8 +438,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.Acc.PDT = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Ashera Harness",
@@ -502,8 +454,6 @@ function init_gear_sets()
 	}
 
   sets.engaged.FullAcc.PDT = {
-	    main="Twashtar",
-	    sub={ name="Centovente", augments={'TP Bonus +1000',}},
 	    ammo="Ginsen",
 	    head={ name="Plun. Bonnet +3", augments={'Enhances "Aura Steal" effect',}},
 	    body="Ashera Harness",

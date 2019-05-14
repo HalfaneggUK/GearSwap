@@ -91,23 +91,23 @@ function init_gear_sets()
 
 	-- Specific spells
 	sets.midcast['Dark Magic'] = {
-	    ammo="Staunch Tathlum +1",
+	    ammo="Pemphredo Tathlum",
 	    head="Flam. Zucchetto +2",
 	    body="Flamma Korazin +2",
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Sulev. Cuisses +2",
-	    feet="Flam. Gambieras +2",
+	    feet="Rat. Sollerets +1",
 	    neck="Abyssal Beads +2",
 	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
-	    right_ear="Etiolation Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Stikini Ring +1",
-	    back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	    right_ear="Dark Earring",
+	    left_ring="Kishar Ring",
+	    right_ring="Evanescence Ring",
+	    back="Chuparrosa Mantle",
 	}
 
 	sets.midcast['Enfeebling Magic'] = {
-	    ammo="Staunch Tathlum +1",
+	    ammo="Pemphredo Tathlum",
 	    head="Flam. Zucchetto +2",
 	    body="Flamma Korazin +2",
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
@@ -116,32 +116,32 @@ function init_gear_sets()
 	    neck="Abyssal Beads +2",
 	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
-	    right_ear="Etiolation Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Stikini Ring +1",
-	    back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	    right_ear="Dark Earring",
+	    left_ring="Kishar Ring",
+	    right_ring="Evanescence Ring",
+	    back="Chuparrosa Mantle",
 	}
 
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {})
-	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {back="Ankou Mantle"})
+	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {neck="Erra Pendant"})
 
 	sets.midcast.Stun = {
-	    ammo="Staunch Tathlum +1",
-	    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
-	    body={ name="Valorous Mail", augments={'Accuracy+28','"Dbl.Atk."+5','Attack+12',}},
+	    ammo="Pemphredo Tathlum",
+	    head="Flam. Zucchetto +2",
+	    body="Flamma Korazin +2",
 	    hands={ name="Leyline Gloves", augments={'Accuracy+7','"Mag.Atk.Bns."+10',}},
 	    legs="Sulev. Cuisses +2",
-	    feet="Sulev. Leggings +2",
+	    feet="Flam. Gambieras +2",
 	    neck="Abyssal Beads +2",
 	    waist="Tempus Fugit",
 	    left_ear="Cessance Earring",
-	    right_ear="Etiolation Earring",
-	    left_ring="Niqmaddu Ring",
-	    right_ring="Kishar Ring",
-	    back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	    right_ear="Dark Earring",
+	    left_ring="Kishar Ring",
+	    right_ring="Evanescence Ring",
+	    back="Chuparrosa Mantle",
 	}
 
-	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Evanescence Ring",ring2="Archon Ring",back="Niht Mantle"})
+	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {neck="Erra Pendant"})
 
 	sets.DrainWeapon = {main="Misanthropy",sub="Alber Strap"}
 
@@ -161,9 +161,9 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
   sets.precast.WS = {
 	    ammo="Knobkierrie",
-	    head="Ratri Sallet",
+	    head={ name="Odyssean Helm", augments={'Weapon skill damage +4%','VIT+15','Accuracy+5',}},
 	    body="Ratri Plate",
-	    hands="Ratri Gadlings",
+	    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +4%','VIT+8','Accuracy+12','Attack+9',}},
 	    legs="Fall. Flanchard +3",
 	    feet="Sulev. Leggings +2",
 	    neck="Abyssal Beads +2",
@@ -172,7 +172,7 @@ function init_gear_sets()
 	    right_ear="Ishvara Earring",
 	    left_ring="Niqmaddu Ring",
 	    right_ring="Epaminondas's Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	    back={ name="Ankou's Mantle", augments={'VIT+30','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
@@ -181,11 +181,25 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
   -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-  sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {})
-  sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-  sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
-  sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-  sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+  sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
+	    ammo="Knobkierrie",
+	    head="Ratri Sallet +1",
+	    body="Ratri Plate",
+	    hands="Rat. Gadlings +1",
+	    legs="Ratri Cuisses +1",
+	    feet="Rat. Sollerets +1",
+	    neck="Abyssal Beads +2",
+	    waist="Fotia Belt",
+	    left_ear="Brutal Earring",
+	    right_ear="Ishvara Earring",
+	    left_ring="Niqmaddu Ring",
+	    right_ring="Epaminondas's Ring",
+	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	})
+  sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
+  sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS['Catastrophe'].SomeAcc, {})
+  sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS['Catastrophe'].Acc, {})
+  sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
 
   sets.precast.WS['Torcleaver'] = {
 	    ammo="Knobkierrie",
@@ -200,7 +214,7 @@ function init_gear_sets()
 	    right_ear="Ishvara Earring",
 	    left_ring="Niqmaddu Ring",
 	    right_ring="Epaminondas's Ring",
-	    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	    back={ name="Ankou's Mantle", augments={'VIT+30','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
   sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS['Torcleaver'], {
 	    head="Sulevia's Mask +2",

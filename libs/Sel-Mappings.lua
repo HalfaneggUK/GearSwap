@@ -13,30 +13,30 @@ elements.list = S{'Light','Dark','Fire','Ice','Wind','Earth','Lightning','Water'
 
 elements.nuke = {['Fire']='Fire', ['Ice']='Blizzard', ['Wind']='Aero', ['Earth']='Stone',
         ['Lightning']='Thunder', ['Water']='Water', ['Light']='Banish', ['Dark']='Bio',}
-		
+
 elements.enspell = {['Fire']='Fire', ['Ice']='Blizzard', ['Wind']='Aero', ['Earth']='Stone',
         ['Lightning']='Thunder', ['Water']='Water', ['Light']='Light', ['Dark']='Dark',}
-		
+
 elements.ninnuke = {['Fire']='Katon', ['Ice']='Hyoton', ['Wind']='Huton', ['Earth']='Doton',
         ['Lightning']='Raiton', ['Water']='Suiton', ['Dark']='Kurayami',}
-		
+
 elements.nukega = {['Fire']='Fira', ['Ice']='Blizza', ['Wind']='Aero', ['Earth']='Stone',
         ['Lightning']='Thunda', ['Water']='Water', ['Light']='Banish', ['Dark']='Bio',}
-		
+
 elements.nukera = {['Fire']='Fi', ['Ice']='Blizza', ['Wind']='Ae', ['Earth']='Stone',
         ['Lightning']='Thunda', ['Water']='Wate',}
-		
+
 elements.spikes = {['Fire']='Blaze',['Lightning']='Shock',['Ice']='Ice',['Dark']='Dread'}
-		
+
 elements.helix = {['Fire']='Pyro', ['Ice']='Cryo', ['Wind']='Anemo', ['Earth']='Geo',
         ['Lightning']='Iono', ['Water']='Hydro', ['Light']='Lumino', ['Dark']='Nocto',}
-		
+
 elements.threnody = {['Fire']='Ice', ['Ice']='Wind', ['Wind']='Earth', ['Earth']='Ltng.',
         ['Lightning']='Water', ['Water']='Fire', ['Light']='Dark', ['Dark']='Light',}
-		
+
 elements.ancient = {['Fire']='Flare', ['Ice']='Freeze', ['Wind']='Tornado', ['Earth']='Quake',
         ['Lightning']='Burst', ['Water']='Flood', ['Light']='Holy', ['Dark']='Comet',}
-		
+
 elements.enfeeble = {['Fire']='Burn', ['Ice']='Frost', ['Wind']='Choke', ['Earth']='Rasp',
         ['Lightning']='Shock', ['Water']='Drown', ['Light']='Dia II', ['Dark']='Bio II',}
 
@@ -62,10 +62,10 @@ elements.rune_of = {['Light']='Lux', ['Dark']='Tenebrae', ['Fire']='Ignis', ['Ic
 
 elements.obi_of = {['Light']='Hachirin-no-obi', ['Dark']='Hachirin-no-obi', ['Fire']='Hachirin-no-obi', ['Ice']='Hachirin-no-obi', ['Wind']='Hachirin-no-obi',
      ['Earth']='Hachirin-no-obi', ['Lightning']='Hachirin-no-obi', ['Water']='Hachirin-no-obi'}
- 
+
 elements.gorget_of = {['Light']='Fotia Gorget', ['Dark']='Fotia Gorget', ['Fire']='Fotia Gorget', ['Ice']='Fotia Gorget',
     ['Wind']='Fotia Gorget', ['Earth']='Fotia Gorget', ['Lightning']='Fotia Gorget', ['Water']='Fotia Gorget'}
- 
+
 elements.belt_of = {['Light']='Fotia Belt', ['Dark']='Fotia Belt', ['Fire']='Fotia Belt', ['Ice']='Fotia Belt',
     ['Wind']='Fotia Belt', ['Earth']='Fotia Belt', ['Lightning']='Fotia Belt', ['Water']='Fotia Belt'}
 
@@ -157,7 +157,7 @@ data.weaponskills.empyrean = {
     ["Hvergelmir"] = "Myrkr",
     ["Gandiva"] = "Jishnu's Radiance",
     ["Armageddon"] = "Wildfire"}
-	
+
 -- Weaponskills that can be used at range.
 data.weaponskills.ranged = S{"Flaming Arrow","Piercing Arrow","Dulling Arrow","Sidewinder","Arching Arrow",
     "Empyreal Arrow","Refulgent Arrow","Apex Arrow","Namas Arrow","Jishnu's Radiance",
@@ -173,7 +173,7 @@ mythic_weapons = S{'Conqueror','Glanzfaust','Yagrush','Laevateinn','Murgleis','V
 relic_weapons = S{'Spharai','Mandau','Excalibur','Ragnarok','Guttler','Bravura','Apocalypse',
 'Gungnir','Kikoku','Amanomurakumo','Mjollnir','Claustrum','Yoichinoyumi','Annihilator'}
 
-rema_ranged_weapons = S{'Fomalhaut','Death Penalty','Armageddon','Fail-Not','Gandiva','Yoichinoyumi','Annihilator'}
+rema_ranged_weapons = S{'Fomalhaut','Death Penalty','Armageddon','Fail-Not','Gandiva','Yoichinoyumi','Annihilator','Gastraphetes'}
 
 rema_ranged_weapons_ammo = {['Fomalhaut'] = 'Chrono Bullet',
 								['Death Penalty'] = 'Living Bullet',
@@ -183,7 +183,7 @@ rema_ranged_weapons_ammo = {['Fomalhaut'] = 'Chrono Bullet',
 								['Gastraphetes'] = "Quelling Bolt",
 								['Yoichinoyumi'] = "Yoichi's Arrow",
 								['Annihilator'] = 'Eradicating Bullet'}
-								
+
 rema_ranged_weapons_ammo_pouch = {['Fomalhaut'] = 'Chr. Bul. Pouch',
 									['Death Penalty'] = 'Liv. Bul. Pouch',
 									['Armageddon'] = 'Dev. Bul. Pouch',
@@ -280,11 +280,11 @@ geo_buffs = S{'Regen','Refresh','Haste','STR','DEX','VIT','AGI','INT','MND','CHR
 
 addendum_white = {[14]="Poisona",[15]="Paralyna",[16]="Blindna",[17]="Silena",[18]="Stona",[19]="Viruna",[20]="Cursna",
     [143]="Erase",[13]="Raise II",[140]="Raise III",[141]="Reraise II",[142]="Reraise III",[135]="Reraise"}
-    
+
 addendum_black = {[253]="Sleep",[259]="Sleep II",[260]="Dispel",[162]="Stone IV",[163]="Stone V",[167]="Thunder IV",
     [168]="Thunder V",[157]="Aero IV",[158]="Aero V",[152]="Blizzard IV",[153]="Blizzard V",[147]="Fire IV",[148]="Fire V",
     [172]="Water IV",[173]="Water V",[255]="Break"}
-	
+
 unbridled_learning_set = {['Thunderbolt']=true,['Harden Shell']=true,['Absolute Terror']=true,
     ['Gates of Hades']=true,['Tourbillion']=true,['Pyric Bulwark']=true,['Bilgestorm']=true,
     ['Bloodrake']=true,['Droning Whirlwind']=true,['Carcharian Verve']=true,['Blistering Roar']=true,
@@ -296,7 +296,7 @@ unbridled_learning_set = {['Thunderbolt']=true,['Harden Shell']=true,['Absolute 
 mageJobs = S{'WHM','BLM','SCH','RDM','BRD','SMN','GEO'}
 meleeJobs = S{'WAR','MNK','THF','PLD','DRK','SAM','NIN','BLU','DNC','RUN','COR','PUP','PLD','DRK','BST'}
 dualWieldJobs = S{'THF','BLU','NIN','DNC'}
-	
+
 -- Item related Mappings.
 
 bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suijingiri Kanemitsu','Zoquittihuitz',
@@ -304,7 +304,7 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Hatxiik','Kuakuakait','Azukinagamitsu','Atetepeyorg','Kaquljaan','Ajjub Bow','Baqil Staff','Ixtab','Otomi Helm',
 'Otomi Gloves','Kaabnax Hat','Kaabnax Trousers','Ejekamal Mask','Ejekamal Boots','Quiahuiz Helm','Quiahuiz Trousers',
 'Uk\'uxkaj Cap'}
-	
+
 cprings = L{"Trizek Ring","Vocation Ring","Capacity Ring","Facility Ring"}
 xprings = L{"Echad Ring","Calibur Ring","Emperor Band","Empress Band","Resolution Ring"}
 cprings_count = 1
@@ -356,7 +356,7 @@ tool_map = {
 	['Gekka: Ichi'] = res.items[8803],
 	['Yain: Ichi'] = res.items[8804],
     }
-	
+
 toolbag_map = {
 	['Katon: Ichi'] = res.items[5308],
 	['Katon: Ni'] = res.items[5308],
@@ -451,7 +451,7 @@ universal_tool_map = {
 	['Gekka: Ichi'] = res.items[2972],
 	['Yain: Ichi'] = res.items[2972],
     }
-	
+
 universal_toolbag_map = {
 	['Katon: Ichi'] = res.items[5867],
 	['Katon: Ni'] = res.items[5867],
@@ -500,14 +500,14 @@ universal_toolbag_map = {
     }
 
 -- Command related mappings.
-	
+
 outgoing_action_category_table = {['/ma']=3,['/ws']=7,['/ja']=9,['/ra']=16,['/ms']=25}
-	
+
 unify_prefix = {['/ma'] = '/ma', ['/magic']='/ma',['/jobability'] = '/ja',['/ja']='/ja',['/item']='/item',['/song']='/ma',
     ['/so']='/ma',['/ninjutsu']='/ma',['/weaponskill']='/ws',['/ws']='/ws',['/ra']='/ra',['/rangedattack']='/ra',['/nin']='/ma',
-    ['/throw']='/ra',['/range']='/ra',['/shoot']='/ra',['/monsterskill']='/ms',['/ms']='/ms',['/pet']='/ja',['Monster']='Monster',['/bstpet']='/ja'}	
-	
-	
+    ['/throw']='/ra',['/range']='/ra',['/shoot']='/ra',['/monsterskill']='/ms',['/ms']='/ms',['/pet']='/ja',['Monster']='Monster',['/bstpet']='/ja'}
+
+
 spell_stepdown = {
 	['Aspir III'] = 'Aspir II',
 	['Aspir II'] = 'Aspir',

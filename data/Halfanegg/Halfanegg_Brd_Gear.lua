@@ -34,7 +34,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Carnwenhan = {main="Carnwenhan",sub="Genmei Shield"}
 	sets.weapons.TwashTP = {main="Twashtar",sub="Centovente"}
-	sets.weapons.TwashAcc = {main="Twashtar",sub="Kaja Knife"}
+	sets.weapons.TwashAcc = {main="Twashtar",sub="Tauret"}
 	sets.weapons.CarnKali = {main="Carnwenhan",sub="Kali"}
 
 	-- Precast Sets
@@ -46,10 +46,10 @@ function init_gear_sets()
 	    hands="Gendewitha Gages",
 	    legs="Aya. Cosciales +2",
 	    feet="Telchine Pigaches",
-	    neck="Mnbw. Whistle +1",
-	    waist="Flume Belt +1",
-	    left_ear="",
-	    right_ear="",
+	    neck="Voltsurge Torque",
+	    waist="Witful Belt",
+	    left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Kishar Ring",
 	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -66,9 +66,9 @@ function init_gear_sets()
 	    legs="Gende. Spats +1",
 	    feet="Telchine Pigaches",
 	    neck="Aoidos' Matinee",
-	    waist="Flume Belt +1",
-	    left_ear="",
-	    right_ear="",
+	    waist="Witful Belt",
+			left_ear="Genmei Earring",
+	    right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
 	    right_ring="Kishar Ring",
 	    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
@@ -279,7 +279,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			left_ear="Genmei Earring",
 			right_ear="Etiolation Earring",
 	    left_ring="Defending Ring",
-	    right_ring="Ayanmo Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 
@@ -329,7 +329,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			left_ear="Telos Earring",
 			right_ear="Cessance Earring",
 	    left_ring="Defending Ring",
-	    right_ring="Ayanmo Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 
@@ -345,7 +345,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, {body="Ashera Har
 			left_ear="Telos Earring",
 			right_ear="Cessance Earring",
 	    left_ring="Defending Ring",
-	    right_ring="Ayanmo Ring",
+	    right_ring="Moonlight Ring",
 	    back="Moonlight Cape",
 	}
 

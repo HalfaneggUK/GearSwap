@@ -17,7 +17,7 @@
                     <weaponskill>2.45</weaponskill>
                 </cooldowns>
                 <mode>pummel</mode>
-                <weaponskill>Last Stand</weaponskill>
+                <weaponskill>Trueflight</weaponskill>
             </default>
             <ls>
                 <cooldowns>
@@ -33,7 +33,7 @@
                     <weaponskill>2.45</weaponskill>
                 </cooldowns>
                 <mode>pummel</mode>
-                <weaponskill>Last Stand</weaponskill>
+                <weaponskill>Trueflight</weaponskill>
             </ls>
         </profiles>
     </global>
